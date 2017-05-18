@@ -1,0 +1,38 @@
+<html>
+<head>
+<script>
+
+function Generar() {
+	var codigo = document.getElementById("codigo").value.slice(-11);  
+    document.getElementById("iframe").setAttribute("src", "https://www.youtube.com/embed/" + codigo); 
+
+    var historial = document.getElementById("historial").innerHTML;
+
+    document.getElementById("historial").innerHTML = historial + hora() +codigo + "<br />";
+}
+
+function hora() {
+	var fecha = new Date(); 
+	return "[" + fecha.getHours() + ":" + fecha.getMinutes() + "] ";
+}
+
+    
+
+
+
+</script>
+</head>
+<body>
+
+<input id="codigo" type="text" />
+<input type="button" value="Generar" onclick="Generar()" /> 
+<br /><br />
+
+<iframe id="iframe" src="" allowfullscreen></iframe>
+
+
+<h4>Historial</h4>
+<div id="historial"></div>
+
+</body>
+</html>
