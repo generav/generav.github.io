@@ -4,8 +4,7 @@
 
 function Generar() {
 	var codigo = document.getElementById("codigo").value.slice(-11);  
-    	//document.getElementById("iframe").setAttribute("src", "https://www.youtube.com/embed/" + codigo); 
-	document.getElementById("iframe").setAttribute("src", "http://www.youtube.com/embed?listType=search&list=" + codigo); 
+    	document.getElementById("iframe").setAttribute("src", "https://www.youtube.com/embed/" + codigo); 
 	var historial = document.getElementById("historial").innerHTML;
 	document.getElementById("historial").innerHTML = historial + hora() +codigo + "<br />";
 }
