@@ -1,5 +1,6 @@
 <html>
 <head>
+<script src='/ytembed.js'></script>
 <script>
 
 function Generar() {
@@ -18,15 +19,12 @@ function hora() {
 </head>
 	
 <body>
-
-<input id="codigo" type="text" />
-<input type="button" value="Generar" onclick="Generar()" /> 
-<br /><br />
-
-<iframe id="iframe" src="" allowfullscreen></iframe>
-
-<h4>Historial</h4>
-<div id="historial"></div>
+	
+<form onsubmit="ytEmbed.init({'block':'youtubeDivSearch','type':'search','q':document.getElementById('ytSearchField').value,'results': 5,'meta':true}); return false;">
+  <input type="text" id="ytSearchField">  <input type="submit" value="  Search   ">
+</form>
+	
+<div id="youtubeDiv"></div>
 
 </body>
 </html>
